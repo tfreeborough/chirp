@@ -74,7 +74,7 @@ export const CreateNote = observer(() => {
     );
 
     return (
-        <div className="bg-white w-[15dvw] min-w-[450px] px-6 py-4 shadow-lg rounded-lg m-8 self-center relative hover:shadow-xl">
+        <div className="bg-white w-[15dvw] min-w-[100%] sm:min-w-[450px] px-2 py-2 sm:px-6 sm:py-4 shadow-lg rounded-lg sm:m-8 self-center relative hover:shadow-xl">
             <MentionTextarea
                 value={text}
                 onChange={handleSetText}

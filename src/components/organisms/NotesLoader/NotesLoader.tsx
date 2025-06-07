@@ -79,7 +79,7 @@ export const NotesLoader = observer(() => {
                     </div>
                     <ul
                         data-testid="pinned-notes"
-                        className="flex flex-wrap gap-4 justify-center"
+                        className="flex flex-wrap gap-4 sm:justify-center justify-stretch"
                     >
                         {pinned.map((note: Note, i) => {
                             return (
@@ -91,6 +91,7 @@ export const NotesLoader = observer(() => {
                                         duration: 0.4,
                                         ease: "easeInOut",
                                     }}
+                                    className="w-full sm:w-auto"
                                     key={note.id}
                                 >
                                     <FadeIn delay={i * 0.05}>
@@ -106,11 +107,12 @@ export const NotesLoader = observer(() => {
 
             <ul
                 data-testid="unpinned-notes"
-                className="flex flex-wrap gap-4 justify-center"
+                className="flex flex-wrap gap-4 sm:justify-center justify-stretch"
             >
                 {unpinned.map((note: Note, i) => {
                     return (
                         <motion.li
+                            className="w-full sm:w-auto"
                             layout
                             layoutId={`note-${note.id}`}
                             transition={{

@@ -36,7 +36,7 @@ export const NoteCard = observer(({ note, pinned = false }: NoteCardProps) => {
             data-testid="note-card"
             onClick={handleSelect}
             className={`
-        shadow-lg px-6 py-4 rounded-md  border w-[15dvw] min-w-[250px] text-sm relative 
+        shadow-lg px-6 py-4 rounded-md  border md:w-[15dvw] md:min-w-[250px] box-border text-sm relative 
            hover:border-stone-400 hover:cursor-pointer
            ${NoteStore.current?.id === note.id ? "border-red-400 bg-pink-50" : "bg-stone-50 border-stone-200"}
         `}

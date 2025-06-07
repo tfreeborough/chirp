@@ -34,6 +34,7 @@ class NoteStore {
     public notes: Note[] = [];
     public current: Note | null = null;
     public pinned: number[] = [];
+    public session: string = "";
 
     constructor() {
         makeAutoObservable(this);
@@ -41,13 +42,23 @@ class NoteStore {
             this,
             {
                 name: "NoteStore",
-                properties: ["notes", "current", "pinned"],
+                properties: ["notes", "current", "pinned", "session"],
                 storage: window.localStorage,
                 removeOnExpiration: true,
             },
             { delay: 200, fireImmediately: false },
         );
         this.generateRandomPlaceholder();
+        if (!this.session) {
+            this.refreshSession();
+        }
+    }
+
+    refreshSession() {
+        this.notes = [];
+        this.current = null;
+        this.pinned = [];
+        this.session = crypto.randomUUID();
     }
 
     setNotes(notes: Note[]) {
