@@ -1,1 +1,1 @@
-# chirp
+### Chirp - The note taking app for people with a lot to say
