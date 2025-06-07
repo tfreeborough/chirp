@@ -7,12 +7,16 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint chirp",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui"
   },
   "dependencies": {
     "@mui/icons-material": "^7.1.1",
     "@tailwindcss/vite": "^4.1.8",
+    "a11y-onkeydown": "^0.3.1",
     "axios": "^1.9.0",
+    "framer-motion": "^12.16.0",
     "mobx-persist-store": "^1.1.8",
     "mobx-react-lite": "^4.1.0",
     "react": "^19.1.0",
@@ -21,6 +25,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.30",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",

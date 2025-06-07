@@ -1,0 +1,13 @@
+.noteContent{
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pinning{
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+}
