@@ -1,0 +1,17 @@
+name: Deploy Vite App
+
+on:
+  push:
+    branches: [ master ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: skywarth/vite-github-pages-deployer@v1.5.0
