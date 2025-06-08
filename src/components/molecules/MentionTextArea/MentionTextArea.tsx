@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import css from "./MentionTextarea.module.css";
+import css from "./MentionTextArea.module.css";
 import type { User } from "../../../types/User.types.ts";
 import { UserMentioner } from "../UserMentioner/UserMentioner.tsx";
 import { getApproximateAtPosition } from "../../../utils/getApproximateAtPosition.ts";
